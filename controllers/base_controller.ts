@@ -25,17 +25,19 @@ class BaseController<T> {
     async updatePost(req: Request, res: Response) {
         const id = req.params.id;
         const body = req.body;
+        const new_post = {
+            ...req.body
+        }
+        console.log(id)
         try {
-            const updatedItem = this.model.findByIdAndUpdate(
+            const updatedItem = await this.model.findByIdAndUpdate(
                 id,
-                body,
-                { new: true, runValidators: true }
+                body
             )
             if (!updatedItem) {
                 return res.status(404).send({ message: "Item not found" });
             }
-
-            res.status(200).send(updatedItem);
+            res.status(200).send(new_post);
         } catch (error) {
             console.log(error)
             res.status(400).send(error);
