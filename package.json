@@ -2,10 +2,10 @@
   "name": "assignment_1",
   "version": "1.0.0",
   "description": "Assignment_1 ",
-  "main": "app.ts",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.ts",
-    "start": "node app.ts"
+    "dev": "nodemon ./dist/app.js",
+    "start": "node ./dist/app.js"
   },
   "repository": {
     "type": "git",
