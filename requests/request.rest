@@ -1,0 +1,28 @@
+###
+GET http://localhost:1515/posts/all
+
+###
+GET http://localhost:1515/posts/all?owner=Ido
+
+###
+GET http://localhost:1515/posts/676476aafb3073b5e50c1f7c
+
+###
+PUT http://localhost:1515/posts/update/676476aafb3073b5e50c1f7c
+content-type: application/json
+
+{
+  "title": "Hello world",
+  "owner": "Ido",
+  "content": "Hello World."
+}
+
+###
+POST http://localhost:1515/posts/add 
+content-type: application/json
+
+{
+  "title": "Hello",
+  "owner": "Ido",
+  "content": "Hello World..."
+}
