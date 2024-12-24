@@ -1,4 +1,4 @@
-import postModel, { IPost } from "../models/posts_model";
+import {postModel, IPost } from "../models/posts_model";
 import { Request, Response } from "express";
 import BaseController from "./base_controller";
 
@@ -16,6 +16,10 @@ class PostsController extends BaseController<IPost> {
         req.body = post;
         super.create(req, res);
     };
+
+    async getById(req: Request, res: Response) {
+        return super.getById(req, res);
+    }
 }
 
 

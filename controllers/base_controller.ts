@@ -14,7 +14,7 @@ class BaseController<T> {
                 const item = await this.model.find({ owner: filter });
                 res.send(item);
             } else {
-                const items = await this.model.find();
+                const items = await this.model.find().populate("comments");;
                 res.send(items);
             }
         } catch (error) {

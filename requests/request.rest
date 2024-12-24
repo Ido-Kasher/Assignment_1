@@ -26,3 +26,31 @@ content-type: application/json
   "owner": "Ido",
   "content": "Hello World..."
 }
+
+
+### comments ###
+PUT http://localhost:1515/posts/addComment/67661b72b1bfa977daa1166c
+content-type: application/json
+
+{
+  "username": "Liraz",
+  "content": "Great success"
+}
+
+###
+GET http://localhost:1515/posts/comment/6766f2c6eef5996317a605c2
+
+###
+PUT http://localhost:1515/posts/comment/update/67670b61b6a476e022174af1
+content-type: application/json
+
+{
+  "username": "Liraz",
+  "content": "Even greater success"
+}
+
+###
+DELETE http://localhost:1515/posts/comment/delete/67670b5fb6a476e022174aed
+
+###
+GET http://localhost:1515/posts/getComments/67661b72b1bfa977daa1166c
